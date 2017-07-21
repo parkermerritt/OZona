@@ -11,15 +11,33 @@
 <script src="http://code.jquery.com/jquery.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-
 <style>
 
+.embedded-video {
+    margin-left: 5%;
+    width:90%;
+    height:100%;
+    min-height: 200px;
+    padding: 0;
+    vertical-align: middle;
+    margin-bottom:-20%;
+    margin-top: -10%;
+}
+
+.mySlides {
+max-height: 560px;
+margin-bottom: -5%;
+margin-top: -3%;
+
+}
 
 .navbar-fixed {
+    margin-bottom:20vh;
     top: 0;
     z-index: 100;
     position: fixed;
     width: 100%;
+    margin-top: -4px;
 }
 
 .navDemo-fixed {
@@ -27,7 +45,6 @@
   z-index:90;
   margin-top: -37%;
   width: 100%;
-
 }
 
 #navDemo {
@@ -52,22 +69,52 @@
 	border: 0;
 	background-color: #202020;
 	border-radius: 0px;
-	margin-bottom: 0;
 }
 
-.nav_links {
-    margin: 0;
+#navLogo {
+margin-bottom:-25px;
+padding-top: -7px;
+margin-top: -3px;
+min-width: 120px;
+
+
 }
+
 
 .nav_links li {
-	display: inline-block;
-    margin-top: 4px;
-}
-.nav_links li a {
-	padding: 0 15.5px;
-	color: #999999;
+  margin: auto;
+  color: #ffffff;
 	text-decoration: none;
+  display: inline-block;
+  padding:-50%;
 }
+
+
+@media screen and (max-width:600px) {
+
+#navLogo {
+  float:left;
+  position: relative;
+  margin-left: -400px;
+  margin: -15px;
+  margin-top: -30px;
+  z-index: 500;
+  padding-top: 15px;
+  min-width: 80px;
+}
+
+.navbar-fixed {
+padding-top: 13px;
+}
+
+
+
+
+}
+
+
+
+
 
 </style>
 
@@ -79,13 +126,13 @@
   <div class="mySlides w3-display-container w3-center">
         <img src="img/BeachySiteSlide.png" style="width:100%">
     <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-      <h3>Los Angeles</h3>
+      <h3></h3>
       <p><b></b></p>
     </div>
   </div>
   <div class="mySlides w3-display-container w3-center">
   <img src="img/JdomSiteSlide.png" style="width:100%">    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-      <h3>New York</h3>
+      <h3></h3>
       <p><b></b></p>
     </div>
   </div>
@@ -93,7 +140,7 @@
     <img
     src="img/ZimmSiteSlide.png" style="width:100%">
     <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-      <h3>Chicago</h3>
+      <h3></h3>
       <p><b></b></p>
     </div>
   </div>
@@ -103,7 +150,6 @@
 
   <nav id='nav_bar'>
     <ul class='nav_links'>
-      <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
       <li><a href="#" class="w3-bar-item w3-button w3-padding-large w3-hide-small">MUSIC</a></li>
       <li><a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">MEDIA</a></li>
       <li><a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">BIO</a></li>
@@ -111,6 +157,8 @@
       <li><a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">MERCH</a></li>
       <li><a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">EVENTS</a></li>
       <li><a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a></li>
+      <li><a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a></li>
+
     </ul>
   </nav>
 
@@ -128,12 +176,20 @@
 <!--Page content-->
 
 
-  <div class="w3-content" style="max-width:2000px;margin-top:46px">
+  <div class="w3-content" style="max-width:2000px;margin-top:0px">
 
 
-    <!-- The Band Section -->
-    <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
-      <h2 class="w3-wide">ENTER THE ZONA</h2>
+    <!-- Intro Section -->
+
+<div class="w3-half w3-justify w3-vertical-align" style="line-height:300px">
+  <iframe frameborder="0" class="embedded-video" src="https://www.youtube.com/embed/9L86r3dGyxM" frameborder="0" allowfullscreen></iframe>
+</div>
+
+
+
+
+    <div class="w3-container w3-content w3-half w3-padding-32 w3-center" style="max-width:500px" id="band">
+      <h2>ENTER THE ZONA</h2>
       <p class="w3-opacity"><i>A Band With No Genre</i></p>
       <p class="w3-justify">OZona is more than just a reggae band. Hailing from Gainesville, Florida, the OZona boys boast a diversity of influences
       ranging from rap to reggae. With few limitations to constrain them, the 6 band members have repeatedly innovated outside of their own comfort zones,
@@ -258,6 +314,9 @@
   <!-- End Page Content -->
   </div>
 
+
+
+
   <!-- Footer -->
   <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
     <i class="fa fa-facebook-official w3-hover-opacity"></i>
@@ -289,12 +348,12 @@ $(document).ready(function() {
       //.log to determine when you want the
       //nav bar to stick.
       console.log($(window).scrollTop())
-    if ($(window).scrollTop() > $('#banner').height()) {
+    if ($(window).scrollTop() > $('#banner').height()-3) {
       $('#nav_bar').addClass('navbar-fixed');
       $('#navDemo').addClass('navDemo-fixed');
 
     }
-    if ($(window).scrollTop() < $('#banner').height()) {
+    if ($(window).scrollTop() < $('#banner').height()-3) {
       $('#nav_bar').removeClass('navbar-fixed');
       $('#navDemo').removeClass('navDemo-fixed');
 
@@ -344,4 +403,7 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+
+
 </script>
