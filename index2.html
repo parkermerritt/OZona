@@ -91,6 +91,7 @@ min-width: 120px;
   padding:-50%;
 }
 
+/* Styles for small and medium screens */
 
 @media screen and (max-width:600px) {
 
@@ -109,12 +110,20 @@ min-width: 120px;
 padding-top: 13px;
 }
 
-
+.space-bg {
+width:100%;
+}
 
 
 }
 
+/* styles for large screens */
 
+@media screen and (min-width:601px) {
+
+.space-bg {display:none;}
+
+}
 
 
 
@@ -178,19 +187,20 @@ padding-top: 13px;
 <!--Page content-->
 
 
-  <div class="w3-content" style="max-width:2000px;margin-top:0px">
+  <div class="w3-content" style="max-width:2000px;">
 
 
     <!-- Intro Section -->
+<!-- <img class="space-bg" src="img\PurpleSpace5.png"> -->
+      <!--Youtube Video Half -->
+      <div class="w3-half w3-transparent w3-justify w3-vertical-align" style="line-height:300px">
+        <iframe frameborder="0" class="embedded-video" src="https://www.youtube.com/embed/9L86r3dGyxM" frameborder="0" allowfullscreen></iframe>
+      </div>
 
-<div class="w3-half w3-justify w3-vertical-align" style="line-height:300px">
-  <iframe frameborder="0" class="embedded-video" src="https://www.youtube.com/embed/9L86r3dGyxM" frameborder="0" allowfullscreen></iframe>
-</div>
 
+      <!--Text half-->
 
-
-
-    <div class="w3-container w3-content w3-half w3-padding-32 w3-center" style="max-width:500px" id="band">
+    <div class="w3-container w3-transparent w3-content w3-half w3-padding-32 w3-center" style="max-width:500px" id="band">
       <h2>ENTER THE ZONA</h2>
       <p class="w3-opacity"><i>A Band With No Genre</i></p>
       <p class="w3-justify">OZona is more than just a reggae band. Hailing from Gainesville, Florida, the OZona boys boast a diversity of influences
@@ -215,8 +225,7 @@ padding-top: 13px;
       </div>
     </div>
   </div>
-
-
+<!-- End first module -->
 
 
 
